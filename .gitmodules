@@ -1,0 +1,6 @@
+[submodule "aflplusplus"]
+	path = aflplusplus
+	url = https://github.com/AFLplusplus/AFLplusplus.git
+[submodule "flatbuffers"]
+	path = flatbuffers
+	url = https://github.com/google/flatbuffers.git
