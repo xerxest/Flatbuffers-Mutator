@@ -1,0 +1,9 @@
+# environment variables:
+AFL_CUSTOM_INFO_PROGRAM=./simple_target
+AFL_CUSTOM_INFO_PROGRAM_ARGV=
+AFL_CUSTOM_INFO_OUT=output_directory/default
+AFL_I_DONT_CARE_ABOUT_MISSING_CRASHES=1
+AFL_TRY_AFFINITY=1
+AFL_SKIP_CPUFREQ=1
+# command line:
+'afl-fuzz' '-i' 'input_corpus' '-o' 'output_directory' './simple_target'
