@@ -1,0 +1,9 @@
+// hello_world.fbs
+
+namespace HelloWorld;
+
+table Message {
+  text: string;
+}
+
+root_type Message;
