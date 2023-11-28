@@ -6,9 +6,11 @@ run:
 put in fbs file contents
 	
 run:
-	nano hello_world.cpp
+	flatc --cpp hello_world.fps
 
-put in contents to include hello_world_generated.h
+run:
+	nano hello_world.cpp
+put in contents to include hello_world_generated.h: #include hello_world_generated.h
 
 run:
 	g++ -o output_example hello_world.cpp hello_world_generated.h -lflatbuffers	
