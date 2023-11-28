@@ -2,7 +2,7 @@
 #include <random>
 #include <algorithm>
 #include "flatbuffers/flatbuffers.h"
-#include "test_schema_generated.h" // Include the generated Flatbuffer code for the TestSchema
+#include "TestSchema_generated.h" // Include the generated Flatbuffer code for the TestSchema
 
 namespace flatbuffer_mutator {
 namespace aflplusplus {

@@ -1,0 +1,9 @@
+\x0c\x00\x00\x00       // Flatbuffer table size (12 bytes)
+\x05\x00\x00\x00       // Offset to string (5 bytes)
+\x00\x00\x00\x00       // Integer value (0)
+\x06\x00\x00\x00       // Offset to vector of integers (6 bytes)
+\x01\x00\x00\x00       // Vector size (1)
+\x0a\x00\x00\x00       // Offset to string (10 bytes)
+\x05\x00\x00\x00       // String length (5 bytes)
+\x48\x65\x6c\x6c\x6f   // ASCII string: "Hello"
+

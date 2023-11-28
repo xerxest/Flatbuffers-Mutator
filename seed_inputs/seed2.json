@@ -1,0 +1,9 @@
+{
+  "someField": 42,
+  "nestedTable": {
+    "nestedField1": "abc",
+    "nestedField2": true
+  },
+  "stringArray": ["foo", "bar", "baz"]
+}
+
