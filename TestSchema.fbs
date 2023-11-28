@@ -1,0 +1,10 @@
+namespace TestSchema;
+
+table TestObject {
+  id: int;
+  name: string;
+  data: [ubyte];
+}
+
+root_type TestObject;
+
