@@ -1,7 +1,10 @@
+# Specify the project name
+project(FlatbuffersMutator)
+
 # Define the sources for your main program
 set(SOURCES
     main.cpp            # Replace with your main program source file
-    flatMutator.cpp      # Your custom mutator source file
+    flatMutator.cc     # Your custom mutator source file
 )
 
 # Create an executable target for your program
@@ -18,4 +21,3 @@ target_link_libraries(my_flatbuffer_program PRIVATE afl++-clang++)
 
 # Optionally, set compiler flags or other build options
 # target_compile_options(my_flatbuffer_program PRIVATE -Wall -O2)
-

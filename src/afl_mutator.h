@@ -18,8 +18,6 @@
 #include "Fuzzer/FuzzerCorpus.h"
 #include "Fuzzer/FuzzerExtFunctions.h"
 
-#include "src/libfuzzer/libfuzzer_macro.h"
-#include "src/flatbuffer_mutator/mutator.h" // Include your custom mutator implementation.
 
 // Defines custom mutator, crossover, and test functions using default
 // serialization format. Default is text.

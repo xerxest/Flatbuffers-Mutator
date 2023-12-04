@@ -72,38 +72,38 @@ std::vector<uint8_t> MergeData(const std::vector<uint8_t>& data1, const std::vec
 size_t A_CustomFlatbufferMutator(MutateHelper* m, bool binary, unsigned char* buf, size_t buf_size,
                                  unsigned char** out_buf, unsigned char* add_buf,
                                  size_t add_buf_size, size_t max_size) {
-    const flatbuffers::uint8_t* existing_data = reinterpret_cast<const flatbuffers::uint8_t*>(buf);
+    const uint8_t* existing_data = reinterpret_cast<const uint8_t*>(buf);
 
     if (binary) {
         flatbuffers::Verifier verifier(existing_data, buf_size);
         if (!TestSchema::VerifyTestObjectBuffer(verifier)) {
-            // TODO: Handle invalid 'existing_data'.
+            // Handle invalid 'existing_data'.
             return 0;
         }
     }
 
+    flatbuffers::FlatBufferBuilder fbb;
     const TestSchema::TestObject* existing_object =
         flatbuffers::GetRoot<TestSchema::TestObject>(existing_data);
 
     switch (GetRandom(m->GetSeed())) {
         case 1:
         case 2: {
-            // TODO: Implement mutation logic for Flatbuffers.
-            
+            TestSchema::TestObjectBuilder builder(fbb);
+
             // Mutate the 'id' field with a random integer value.
             int new_id = GenerateRandomId();
-            existing_object->mutate_id(new_id);
+            builder.add_id(new_id);
 
             // Mutate the 'name' field with a random string.
-            std::string new_name = GenerateRandomString(10); // Adjust the length as needed.
-            existing_object->mutate_name(new_name.c_str());
+            std::string new_name = GenerateRandomString(10);
+            builder.add_name(fbb.CreateString(new_name));
 
             // Mutate the 'data' field with random byte values.
-            std::vector<uint8_t> new_data = GenerateRandomData(5); // Adjust the size as needed.
-            existing_object->mutate_data(&new_data);
+            std::vector<uint8_t> new_data = GenerateRandomData(5);
+            builder.add_data(fbb.CreateVector(new_data));
 
-            flatbuffers::FlatBufferBuilder fbb;
-            fbb.Finish(existing_object->Pack(fbb));
+            fbb.Finish(builder.Finish());
             const uint8_t* serialized_data = fbb.GetBufferPointer();
             size_t serialized_size = fbb.GetSize();
 
@@ -111,36 +111,31 @@ size_t A_CustomFlatbufferMutator(MutateHelper* m, bool binary, unsigned char* bu
                 memcpy(m->ReallocBuf(serialized_size), serialized_data, serialized_size);
                 return serialized_size;
             } else {
-                // TODO: Handle the case where the mutation exceeds 'max_size'.
+                // Handle the case where the mutation exceeds 'max_size'.
                 return 0;
             }
-            
             break;
         }
         default: {
-            // TODO: Implement crossover logic for Flatbuffers.
-
-            // Ensure that 'add_buf' is a valid Flatbuffer.
-            flatbuffers::Verifier add_buf_verifier(reinterpret_cast<const flatbuffers::uint8_t*>(add_buf), add_buf_size);
+            flatbuffers::Verifier add_buf_verifier(reinterpret_cast<const uint8_t*>(add_buf), add_buf_size);
             if (binary && !TestSchema::VerifyTestObjectBuffer(add_buf_verifier)) {
-                // TODO: Handle invalid 'add_buf' data.
+                // Handle invalid 'add_buf' data.
                 return 0;
             }
 
-            // Parse 'add_buf' to access its data.
             const TestSchema::TestObject* add_object =
-                flatbuffers::GetRoot<TestSchema::TestObject>(reinterpret_cast<const flatbuffers::uint8_t*>(add_buf));
+                flatbuffers::GetRoot<TestSchema::TestObject>(reinterpret_cast<const uint8_t*>(add_buf));
 
-            // Merge fields from 'existing_object' and 'add_object' into a new 'merged_object'.
             TestSchema::TestObjectBuilder builder(fbb);
+
             int merged_id = existing_object->id() + add_object->id();
             builder.add_id(merged_id);
             
-            std::string merged_name = MergeStrings(existing_object->name(), add_object->name());
-            builder.add_name(merged_name.c_str());
+            std::string merged_name = MergeStrings(existing_object->name()->str(), add_object->name()->str());
+            builder.add_name(fbb.CreateString(merged_name));
 
-            // Merge the 'data' fields (vector of unsigned bytes) as needed.
-            std::vector<uint8_t> merged_data = MergeData(existing_object->data(), add_object->data());
+            std::vector<uint8_t> merged_data = MergeData(std::vector<uint8_t>(existing_object->data()->begin(), existing_object->data()->end()),
+                                                         std::vector<uint8_t>(add_object->data()->begin(), add_object->data()->end()));
             builder.add_data(fbb.CreateVector(merged_data));
 
             fbb.Finish(builder.Finish());
@@ -152,17 +147,15 @@ size_t A_CustomFlatbufferMutator(MutateHelper* m, bool binary, unsigned char* bu
                 return serialized_size;
             } else {
                 // Mutation exceeds 'max_size', truncate it to fit.
-        size_t truncated_size = std::min(serialized_size, max_size);
-        memcpy(m->ReallocBuf(truncated_size), serialized_data, truncated_size);
-        return truncated_size;
+                size_t truncated_size = std::min(serialized_size, max_size);
+                memcpy(m->ReallocBuf(truncated_size), serialized_data, truncated_size);
+                return truncated_size;
             }
-            
             break;
         }
     }
 
-    // TODO: Handle any other unexpected error scenarios here.
-    
+    // Fix the typo here
     *out_buf = m->GetOutBuf();
     return m->GetLen();
 }

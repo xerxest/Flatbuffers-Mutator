@@ -1,0 +1,1 @@
+/usr/bin/g++ -rdynamic CMakeFiles/my_flatbuffer_program.dir/main.cpp.o CMakeFiles/my_flatbuffer_program.dir/flatMutator.cc.o -o my_flatbuffer_program  -lafl++-clang++ 
