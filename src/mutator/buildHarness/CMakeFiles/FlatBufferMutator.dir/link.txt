@@ -1,0 +1,1 @@
+g++ -rdynamic CMakeFiles/FlatBufferMutator.dir/harness.cpp.o -o FlatBufferMutator  /usr/local/lib/libflatbuffers.a 
