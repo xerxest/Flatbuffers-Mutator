@@ -45,6 +45,8 @@ extern "C" my_mutator_t *afl_custom_init(afl_state_t *afl, unsigned int seed) {
 
 }
 
+// how to read the schema file 
+
 extern "C"  size_t afl_custom_fuzz(my_mutator_t *data, uint8_t *buf, size_t buf_size,
                        u8 **out_buf, uint8_t *add_buf,
                        size_t add_buf_size,  // add_buf can be NULL

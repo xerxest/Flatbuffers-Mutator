@@ -264,4 +264,8 @@ CMakeFiles/FlatBufferHarness.dir/ReadFlatbufferVals.cpp.o: \
   /usr/include/aarch64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/aarch64-linux-gnu/bits/iscanonical.h \
   /xerg/src/mutator/test_generated.h \
-  /usr/lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/iostream
+  /usr/lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/iostream \
+  /usr/lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/fstream \
+  /usr/lib/gcc/aarch64-linux-gnu/11/../../../../include/aarch64-linux-gnu/c++/11/bits/basic_file.h \
+  /usr/lib/gcc/aarch64-linux-gnu/11/../../../../include/aarch64-linux-gnu/c++/11/bits/c++io.h \
+  /usr/lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/bits/fstream.tcc

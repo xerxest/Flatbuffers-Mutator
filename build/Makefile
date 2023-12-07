@@ -129,29 +129,29 @@ FlatBufferMutator/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FlatBufferMutator.dir/build.make CMakeFiles/FlatBufferMutator.dir/build
 .PHONY : FlatBufferMutator/fast
 
-src/mutator/example.o: src/mutator/example.cpp.o
-.PHONY : src/mutator/example.o
+src/mutator/mutator.o: src/mutator/mutator.cpp.o
+.PHONY : src/mutator/mutator.o
 
 # target to build an object file
-src/mutator/example.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FlatBufferMutator.dir/build.make CMakeFiles/FlatBufferMutator.dir/src/mutator/example.cpp.o
-.PHONY : src/mutator/example.cpp.o
+src/mutator/mutator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FlatBufferMutator.dir/build.make CMakeFiles/FlatBufferMutator.dir/src/mutator/mutator.cpp.o
+.PHONY : src/mutator/mutator.cpp.o
 
-src/mutator/example.i: src/mutator/example.cpp.i
-.PHONY : src/mutator/example.i
+src/mutator/mutator.i: src/mutator/mutator.cpp.i
+.PHONY : src/mutator/mutator.i
 
 # target to preprocess a source file
-src/mutator/example.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FlatBufferMutator.dir/build.make CMakeFiles/FlatBufferMutator.dir/src/mutator/example.cpp.i
-.PHONY : src/mutator/example.cpp.i
+src/mutator/mutator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FlatBufferMutator.dir/build.make CMakeFiles/FlatBufferMutator.dir/src/mutator/mutator.cpp.i
+.PHONY : src/mutator/mutator.cpp.i
 
-src/mutator/example.s: src/mutator/example.cpp.s
-.PHONY : src/mutator/example.s
+src/mutator/mutator.s: src/mutator/mutator.cpp.s
+.PHONY : src/mutator/mutator.s
 
 # target to generate assembly for a file
-src/mutator/example.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FlatBufferMutator.dir/build.make CMakeFiles/FlatBufferMutator.dir/src/mutator/example.cpp.s
-.PHONY : src/mutator/example.cpp.s
+src/mutator/mutator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FlatBufferMutator.dir/build.make CMakeFiles/FlatBufferMutator.dir/src/mutator/mutator.cpp.s
+.PHONY : src/mutator/mutator.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... FlatBufferMutator"
-	@echo "... src/mutator/example.o"
-	@echo "... src/mutator/example.i"
-	@echo "... src/mutator/example.s"
+	@echo "... src/mutator/mutator.o"
+	@echo "... src/mutator/mutator.i"
+	@echo "... src/mutator/mutator.s"
 .PHONY : help
 
 

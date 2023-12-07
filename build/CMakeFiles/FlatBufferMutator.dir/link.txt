@@ -1,1 +1,1 @@
-g++ -fPIC -shared -Wl,-soname,libFlatBufferMutator.so -o libFlatBufferMutator.so CMakeFiles/FlatBufferMutator.dir/src/mutator/example.cpp.o  /usr/local/lib/libflatbuffers.a 
+g++ -fPIC -shared -Wl,-soname,libFlatBufferMutator.so -o libFlatBufferMutator.so CMakeFiles/FlatBufferMutator.dir/src/mutator/mutator.cpp.o  /usr/local/lib/libflatbuffers.a 

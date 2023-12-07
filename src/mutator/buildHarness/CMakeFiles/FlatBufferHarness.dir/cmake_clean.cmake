@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/FlatBufferHarness.dir/harness.cpp.o"
-  "CMakeFiles/FlatBufferHarness.dir/harness.cpp.o.d"
+  "CMakeFiles/FlatBufferHarness.dir/test.cpp.o"
+  "CMakeFiles/FlatBufferHarness.dir/test.cpp.o.d"
   "FlatBufferHarness"
   "FlatBufferHarness.pdb"
 )

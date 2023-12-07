@@ -13,7 +13,7 @@ set(CMAKE_SHARED_LIBRARY_SUFFIX ".so")
 
 # Add the library target
 add_library(FlatBufferMutator SHARED
-    src/mutator/example.cpp
+    src/mutator/mutator.cpp
 )
 
 # Specify the include directories for Flatbuffers

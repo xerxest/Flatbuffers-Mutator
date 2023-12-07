@@ -1,17 +1,37 @@
-#include <stdio.h>
-#include <string.h>
-#include <cassert>
+#include "flatbuffers/flatbuffers.h"
+#include "test_generated.h"
+#include <iostream>
+#include <vector>
+#include <fstream>
 
+int main() {
 
-int main(int argc, char *argv[]) {
-  char str[6];
-  fgets(str, sizeof(str), stdin);
-  int zero = 0;
+    std::vector<uint8_t> buffer;
+    uint8_t byte;
 
-  if(str[1] == 'A')
-  {
-     assert(false);
-  }
+    while (std::cin >> byte) {
+        buffer.push_back(byte);
+    }
 
-  return 0;
+    // std::ofstream outputFile("debug.txt", std::ios::trunc);
+
+    // if (!outputFile.is_open()) {
+    //     std::cerr << "Error: Unable to open the file." << std::endl;
+    //     return 1;
+    // }
+
+    auto monster = MyGame::GetMonster(buffer.data());
+
+    // if(monster->hp() == 1)
+    // {
+    //   assert(false);
+    // }
+
+    // // Append the text to the file
+    // outputFile.write(reinterpret_cast<char*>(buffer.data()), 1544);
+
+    // // Close the file
+    // outputFile.close();
+
+    return 0;
 }
