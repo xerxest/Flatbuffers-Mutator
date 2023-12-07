@@ -1,0 +1,9 @@
+// message.fbs
+namespace Example;
+
+table Message {
+  text:string;
+}
+
+root_type Message;
+
