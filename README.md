@@ -17,15 +17,15 @@ $$
 $$ git submodule update --init --recursive
 
 # AFL:
-$$ cd into afl folder
-$$ run: make clean all
-$$ run: make install
+# cd into afl folder
+$$ make clean all
+$$ make install
 
 # Flatbuffer:
-$$ cd into flatbuffer
-$$	run: cmake -G "Unix Makefiles"
-$$	run: make -j
-$$	run make install
+# cd into flatbuffer
+$$	cmake -G "Unix Makefiles"
+$$	make -j
+$$	make install
 ```
 
 ### Building 
