@@ -31,6 +31,6 @@ $$ export AFL_CUSTOM_MUTATOR_LIBRARY="/flatbuf/Flatbuffers-Mutator/build/libFlat
 # Running AFL
 $$ cd /flatbuf/Flatbuffers-Mutator/src/mutator/buildHarness
 $$ afl-fuzz -i ./seed -o ./output ./FlatBufferHarness
-$ note if you get an error with running, make sure to refresh the .bfbs file
+# note if you get an error with running, make sure to refresh the .bfbs file
 $$ cp test.bfbs outFlatbuf.bfbs
 ```
