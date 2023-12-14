@@ -10,6 +10,24 @@ $$
 
 ```
 
+### Building AFL and Flatbuffer Libraries
+
+```sh
+#Install AFL and Flatbuffer submodules
+$$ git submodule update --init --recursive
+
+# AFL:
+$$ cd into afl folder
+$$ run: make clean all
+$$ run: make install
+
+# Flatbuffer:
+$$ cd into flatbuffer
+$$	run: cmake -G "Unix Makefiles"
+$$	run: make -j
+$$	run make install
+```
+
 ### Building 
 ```sh
 # To build the harness file ( rm CCMakeLists.txt before running cmake)  
