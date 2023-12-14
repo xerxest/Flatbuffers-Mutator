@@ -20,12 +20,12 @@ $$
 $$ git submodule update --init --recursive
 
 # AFL:
-# cd into afl folder
+# cd into aflplusplus folder
 $$ make clean all
 $$ make install
 
 # Flatbuffer:
-# cd into flatbuffer
+# cd into flatbuffers folder
 $$	cmake -G "Unix Makefiles"
 $$	make -j
 $$	make install
