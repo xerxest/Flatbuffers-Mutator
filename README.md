@@ -1,8 +1,5 @@
 ### Create The Environment
  [docker image](https://hub.docker.com/repository/docker/xctarman/flatbuf/general), the Docker environment is already set up for you.
-2) Clone `Flatbuffers-Mutator`
-3) Compile `Hydrogen` with the help of `CMakeLists.txt`.
-4) Assuming you are using the Docker and Ninja, the steps would be like below. But first [install](https://docs.docker.com/install/) Docker using the recommended method for your system.
 ```sh
 # Download and run the Docker from your system.
 $ docker run -v "Path to store the afl project":/flatbuf -it --platform linux/arm64 xctarman/flatbuf
