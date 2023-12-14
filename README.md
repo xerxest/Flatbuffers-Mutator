@@ -12,8 +12,6 @@ $$
 
 ### Building AFL and Flatbuffer Libraries
 
-(All commands run within Docker container)
-
 ```sh
 # Install AFL and Flatbuffer submodules
 # cd into root of repo
