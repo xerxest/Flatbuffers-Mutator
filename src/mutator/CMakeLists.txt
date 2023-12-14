@@ -9,7 +9,9 @@ set(CMAKE_CXX_STANDARD 11)
 set(FLATBUFFERS_INSTALL_DIR "/usr/local")
 
 # Add the executable target
-add_executable(FlatBufferHarness test.cpp)
+add_executable(FlatBufferHarness BasicTest.cpp)
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g")
 
 # Specify the include directories for Flatbuffers
 target_include_directories(FlatBufferHarness PRIVATE ${FLATBUFFERS_INSTALL_DIR}/include)

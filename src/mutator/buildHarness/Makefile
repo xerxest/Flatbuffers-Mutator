@@ -129,29 +129,29 @@ FlatBufferHarness/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FlatBufferHarness.dir/build.make CMakeFiles/FlatBufferHarness.dir/build
 .PHONY : FlatBufferHarness/fast
 
-test.o: test.cpp.o
-.PHONY : test.o
+BasicTest.o: BasicTest.cpp.o
+.PHONY : BasicTest.o
 
 # target to build an object file
-test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FlatBufferHarness.dir/build.make CMakeFiles/FlatBufferHarness.dir/test.cpp.o
-.PHONY : test.cpp.o
+BasicTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FlatBufferHarness.dir/build.make CMakeFiles/FlatBufferHarness.dir/BasicTest.cpp.o
+.PHONY : BasicTest.cpp.o
 
-test.i: test.cpp.i
-.PHONY : test.i
+BasicTest.i: BasicTest.cpp.i
+.PHONY : BasicTest.i
 
 # target to preprocess a source file
-test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FlatBufferHarness.dir/build.make CMakeFiles/FlatBufferHarness.dir/test.cpp.i
-.PHONY : test.cpp.i
+BasicTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FlatBufferHarness.dir/build.make CMakeFiles/FlatBufferHarness.dir/BasicTest.cpp.i
+.PHONY : BasicTest.cpp.i
 
-test.s: test.cpp.s
-.PHONY : test.s
+BasicTest.s: BasicTest.cpp.s
+.PHONY : BasicTest.s
 
 # target to generate assembly for a file
-test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FlatBufferHarness.dir/build.make CMakeFiles/FlatBufferHarness.dir/test.cpp.s
-.PHONY : test.cpp.s
+BasicTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FlatBufferHarness.dir/build.make CMakeFiles/FlatBufferHarness.dir/BasicTest.cpp.s
+.PHONY : BasicTest.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... FlatBufferHarness"
-	@echo "... test.o"
-	@echo "... test.i"
-	@echo "... test.s"
+	@echo "... BasicTest.o"
+	@echo "... BasicTest.i"
+	@echo "... BasicTest.s"
 .PHONY : help
 
 

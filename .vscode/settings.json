@@ -49,6 +49,7 @@
         "set": "cpp",
         "span": "cpp",
         "stack": "cpp",
-        "unordered_map": "cpp"
+        "unordered_map": "cpp",
+        "locale": "cpp"
     }
 }

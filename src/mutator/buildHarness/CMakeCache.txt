@@ -15,9 +15,6 @@
 ########################
 
 //Path to a program.
-AFL_COMPILER:FILEPATH=AFL_COMPILER-NOTFOUND
-
-//Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
 
 //Path to a program.
@@ -220,15 +217,6 @@ FlatBufferHarness_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 FlatBufferHarness_SOURCE_DIR:STATIC=/xerg/src/mutator
-
-//Value Computed by CMake
-FlatBufferMutator_BINARY_DIR:STATIC=/xerg/src/mutator/buildHarness
-
-//Value Computed by CMake
-FlatBufferMutator_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-FlatBufferMutator_SOURCE_DIR:STATIC=/xerg/src/mutator
 
 
 ########################

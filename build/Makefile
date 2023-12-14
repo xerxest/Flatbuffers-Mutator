@@ -129,6 +129,30 @@ FlatBufferMutator/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FlatBufferMutator.dir/build.make CMakeFiles/FlatBufferMutator.dir/build
 .PHONY : FlatBufferMutator/fast
 
+src/mutator/BaseTypeMutator.o: src/mutator/BaseTypeMutator.cpp.o
+.PHONY : src/mutator/BaseTypeMutator.o
+
+# target to build an object file
+src/mutator/BaseTypeMutator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FlatBufferMutator.dir/build.make CMakeFiles/FlatBufferMutator.dir/src/mutator/BaseTypeMutator.cpp.o
+.PHONY : src/mutator/BaseTypeMutator.cpp.o
+
+src/mutator/BaseTypeMutator.i: src/mutator/BaseTypeMutator.cpp.i
+.PHONY : src/mutator/BaseTypeMutator.i
+
+# target to preprocess a source file
+src/mutator/BaseTypeMutator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FlatBufferMutator.dir/build.make CMakeFiles/FlatBufferMutator.dir/src/mutator/BaseTypeMutator.cpp.i
+.PHONY : src/mutator/BaseTypeMutator.cpp.i
+
+src/mutator/BaseTypeMutator.s: src/mutator/BaseTypeMutator.cpp.s
+.PHONY : src/mutator/BaseTypeMutator.s
+
+# target to generate assembly for a file
+src/mutator/BaseTypeMutator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FlatBufferMutator.dir/build.make CMakeFiles/FlatBufferMutator.dir/src/mutator/BaseTypeMutator.cpp.s
+.PHONY : src/mutator/BaseTypeMutator.cpp.s
+
 src/mutator/mutator.o: src/mutator/mutator.cpp.o
 .PHONY : src/mutator/mutator.o
 
@@ -162,6 +186,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... FlatBufferMutator"
+	@echo "... src/mutator/BaseTypeMutator.o"
+	@echo "... src/mutator/BaseTypeMutator.i"
+	@echo "... src/mutator/BaseTypeMutator.s"
 	@echo "... src/mutator/mutator.o"
 	@echo "... src/mutator/mutator.i"
 	@echo "... src/mutator/mutator.s"

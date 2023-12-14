@@ -69,28 +69,28 @@ include CMakeFiles/FlatBufferHarness.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/FlatBufferHarness.dir/flags.make
 
-CMakeFiles/FlatBufferHarness.dir/test.cpp.o: CMakeFiles/FlatBufferHarness.dir/flags.make
-CMakeFiles/FlatBufferHarness.dir/test.cpp.o: ../test.cpp
-CMakeFiles/FlatBufferHarness.dir/test.cpp.o: CMakeFiles/FlatBufferHarness.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/xerg/src/mutator/buildHarness/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/FlatBufferHarness.dir/test.cpp.o"
-	afl-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FlatBufferHarness.dir/test.cpp.o -MF CMakeFiles/FlatBufferHarness.dir/test.cpp.o.d -o CMakeFiles/FlatBufferHarness.dir/test.cpp.o -c /xerg/src/mutator/test.cpp
+CMakeFiles/FlatBufferHarness.dir/BasicTest.cpp.o: CMakeFiles/FlatBufferHarness.dir/flags.make
+CMakeFiles/FlatBufferHarness.dir/BasicTest.cpp.o: ../BasicTest.cpp
+CMakeFiles/FlatBufferHarness.dir/BasicTest.cpp.o: CMakeFiles/FlatBufferHarness.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/xerg/src/mutator/buildHarness/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/FlatBufferHarness.dir/BasicTest.cpp.o"
+	afl-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FlatBufferHarness.dir/BasicTest.cpp.o -MF CMakeFiles/FlatBufferHarness.dir/BasicTest.cpp.o.d -o CMakeFiles/FlatBufferHarness.dir/BasicTest.cpp.o -c /xerg/src/mutator/BasicTest.cpp
 
-CMakeFiles/FlatBufferHarness.dir/test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FlatBufferHarness.dir/test.cpp.i"
-	afl-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /xerg/src/mutator/test.cpp > CMakeFiles/FlatBufferHarness.dir/test.cpp.i
+CMakeFiles/FlatBufferHarness.dir/BasicTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FlatBufferHarness.dir/BasicTest.cpp.i"
+	afl-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /xerg/src/mutator/BasicTest.cpp > CMakeFiles/FlatBufferHarness.dir/BasicTest.cpp.i
 
-CMakeFiles/FlatBufferHarness.dir/test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FlatBufferHarness.dir/test.cpp.s"
-	afl-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /xerg/src/mutator/test.cpp -o CMakeFiles/FlatBufferHarness.dir/test.cpp.s
+CMakeFiles/FlatBufferHarness.dir/BasicTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FlatBufferHarness.dir/BasicTest.cpp.s"
+	afl-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /xerg/src/mutator/BasicTest.cpp -o CMakeFiles/FlatBufferHarness.dir/BasicTest.cpp.s
 
 # Object files for target FlatBufferHarness
 FlatBufferHarness_OBJECTS = \
-"CMakeFiles/FlatBufferHarness.dir/test.cpp.o"
+"CMakeFiles/FlatBufferHarness.dir/BasicTest.cpp.o"
 
 # External object files for target FlatBufferHarness
 FlatBufferHarness_EXTERNAL_OBJECTS =
 
-FlatBufferHarness: CMakeFiles/FlatBufferHarness.dir/test.cpp.o
+FlatBufferHarness: CMakeFiles/FlatBufferHarness.dir/BasicTest.cpp.o
 FlatBufferHarness: CMakeFiles/FlatBufferHarness.dir/build.make
 FlatBufferHarness: /usr/local/lib/libflatbuffers.a
 FlatBufferHarness: CMakeFiles/FlatBufferHarness.dir/link.txt

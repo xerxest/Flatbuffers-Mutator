@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/FlatBufferMutator.dir/src/mutator/BaseTypeMutator.cpp.o"
+  "CMakeFiles/FlatBufferMutator.dir/src/mutator/BaseTypeMutator.cpp.o.d"
   "CMakeFiles/FlatBufferMutator.dir/src/mutator/mutator.cpp.o"
   "CMakeFiles/FlatBufferMutator.dir/src/mutator/mutator.cpp.o.d"
   "libFlatBufferMutator.pdb"
